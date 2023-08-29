@@ -32,6 +32,7 @@ async function register(req, res) {
     const message = transport.sendMail({
       from: process.env["SENDER"],
       to: email,
+      subject: "Activate your account",
       html: `
         <div>
           <h1>activation link</h1>
